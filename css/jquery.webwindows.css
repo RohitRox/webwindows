@@ -1,0 +1,32 @@
+.windows{
+  position: fixed;
+  height: 180px;
+  width: 150px;
+  background: #333;
+  padding: 4px;
+  bottom: 0px;
+  right: 0px;
+}
+.window-wrap{
+  background: #eee;
+}
+.window-header{
+  background: #666;
+  color: #fff;
+  display: block;
+  float: left;
+  width: 100%;
+}
+.window-header a{
+  padding: 2px;
+  color: #ccc;
+  text-decoration: none;
+  float: right;
+}
+.window-header a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.window-container{
+  min-height: 60px;
+}
