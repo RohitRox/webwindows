@@ -1,9 +1,28 @@
 /*!
- * jQuery webwindows | create windows ui inn web
+ * jQuery webwindows | create windows ui in web
  * Author: @roxxypoxxy & @xtranophilist
  * Uses DragResize v1.0 by Angus Turnbull - http://www.twinhelix.com.
  * Github: https://github.com/RohitRox/webwindows
  */
+
+/*
+USAGE: 
+
+$(document).ready(function() {
+    $('div#some_id').webwindows();
+});
+// Binds an click event to div#some_id to fire a webwindow and put there its inner html , webwindows's title is set by the title of div#some_id
+
+PROGRAMMATICAL CONTROL:
+
+$.webwindows({ title: 'my title', content: 'be gud do gud'});
+
+HOOKS:
+
+$.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('gr8')});
+
+*/
+
 
 //Global
 
@@ -55,6 +74,7 @@
         },
         build_window : function(pos, cfg){
             cntr = document.createElement('div');
+
             cntr.className='drsElement';
             cntr.id='pane'+pos;
             cntr.setAttribute('style', 'left: '+pos*cfg['l']+'px; top: '+pos*cfg['t']+'px; width: '+cfg['w']+'px; height: '+(cfg['h']+20)+'px; text-align: center;z-index:'+(++CZ)+';');
@@ -133,6 +153,7 @@
         },
         close_pane : function(webwindow){
              $(document.getElementById('pane'+webwindow)).remove();
+             $(document.getElementById('min_win'+webwindow)).remove();
              //empty the pane id
              POS[webwindow]=0;
         }
@@ -145,12 +166,9 @@
 
          // init;
          var intialize = function() {
-           pos = get_pos(POS)[0];
-           cfg = options;
-           document.activeBox = 0;
-           build_window(pos, cfg);
-           init_drag_resize(cfg);
-           return webwindows;
+           webwindows.each(function(){
+            $(this).bind('click', function(){ $.webwindows({ title: $(this).attr('title'), content: $(this).html() });  })
+           });
          };
          
          var open_window = function(options){
