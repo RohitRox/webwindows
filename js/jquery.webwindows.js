@@ -18,6 +18,11 @@ PROGRAMMATICAL CONTROL:
 // fire up webwindow anywhere from the code
 $.webwindows({ title: 'my title', content: 'be gud do gud'});
 
+// fire up throw in the content of some div
+$.webwindows({ title: 'my title', div: '#mydiv'});
+$.webwindows({ title: 'my title', div: '.mydiv'});
+
+
 // close the latest webwindow
 $.closewebwindows();
 
@@ -101,7 +106,12 @@ $.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('g
             cntnt.className='paneContent';
             cntnt.id='paneContent'+pos;
 
+            if (cfg['div']!=undefined)
+            {
+            cntnt.innerHTML=$(cfg['div']).html();
+            }else{
             cntnt.innerHTML=cfg['content'];
+            }
 
             //Create title bar
             ttl = document.createElement('div');
