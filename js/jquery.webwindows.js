@@ -15,10 +15,15 @@ $(document).ready(function() {
 
 PROGRAMMATICAL CONTROL:
 
+// fire up webwindow anywhere from the code
 $.webwindows({ title: 'my title', content: 'be gud do gud'});
+
+// close the latest webwindow
+$.closewebwindows();
 
 HOOKS:
 
+//TODO
 $.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('gr8')});
 
 */
@@ -34,6 +39,15 @@ $.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('g
 
      $.webwindows = function(window_settings){
         $.webwindows.open_pane(window_settings);
+    };
+
+    $.closewebwindows = function(){
+        pos = $('.drsElement').length;
+        console.log(pos);
+        $(document.getElementById('pane'+pos)).remove();
+        $(document.getElementById('min_win'+pos)).remove();
+        POS[pos]=0;
+
     };
 
     $.extend($.webwindows, {
