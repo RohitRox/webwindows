@@ -182,7 +182,10 @@ footer {
   position:fixed;
   bottom:50px;
 }
-
+.little-demo{
+  border: 1px solid #ccc;
+  padding: 4px;
+}
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {

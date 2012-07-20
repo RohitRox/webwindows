@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/jquery.webwindows.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,6 +27,13 @@
           <li><a href="https://github.com/RohitRox/webwindows/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/RohitRox/webwindows">View On <strong>GitHub</strong></a></li>
         </ul>
+        <div class="little-demo">
+          <h2>Little Demo</h2>
+        <p id="in-webwindow">
+          I am here . Click Me and I'll be inside windows
+        </p>
+        <p><a href="javascript:" id="close-webwindow">Close Windows</a></p>
+        </div>
       </header>
       <section>
         <h1>jQuery webwindows | create windows ui in web</h1>
@@ -69,6 +77,14 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="javascripts/jquery.webwindows.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#in-webwindow').webwindows();
+            $('#close-webwindow').click(function(){ $.closewebwindows(); });
+        });
+    </script>
     
   </body>
 </html>

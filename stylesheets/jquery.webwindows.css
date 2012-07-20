@@ -1,0 +1,188 @@
+.drsElement{
+  border: #666 solid 1px;
+  background: #fafafa;
+  position: absolute;
+}
+.drsMoveHandle{
+  background-color: #eee;
+  padding: 4px 2px 4px 2px;
+  text-align: left;
+  box-shadow: 0px 1px 2px #ccc;
+  color: #333;
+  text-shadow: 0px 1px 1px #fff;
+  cursor: move;
+}
+.webwindows_buttons{
+  float: right;
+}
+.drsMoveHandle .webwindows_buttons a, .webwin_min_bar div a{
+  text-decoration: none;
+  background-color: #444;
+  color: #eee;
+  padding: 1px 4px;
+  margin: 1px;
+  text-shadow: 0px 1px 1px #333;
+  float: left;
+}
+.paneContent{
+  padding: 4px;
+}
+.webwin_min_bar{
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.webwin_min_bar div{
+  float: right;
+  background: #CCC;
+  padding: 6px;
+}
+.webwin_min_bar div span{ float: left; padding-right: 10px; }
+/*
+ The DragResize object name is automatically applied to all generated
+ corner resize handles, as well as one of the individual classes below.
+*/
+.dragresize {
+ position: absolute;
+ width: 5px;
+ height: 5px;
+ font-size: 1px;
+ background: #EEE;
+ border: 1px solid #333;
+}
+/*
+ Individual corner classes - required for resize support.
+ These are based on the object name plus the handle ID.
+*/
+.dragresize-tl {
+ top: -8px;
+ left: -8px;
+ cursor: nw-resize;
+}
+.dragresize-tm {
+ top: -8px;
+ left: 50%;
+ margin-left: -4px;
+ cursor: n-resize;
+}
+.dragresize-tr {
+ top: -8px;
+ right: -8px;
+ cursor: ne-resize;
+}
+
+.dragresize-ml {
+ top: 50%;
+ margin-top: -4px;
+ left: -8px;
+ cursor: w-resize;
+}
+.dragresize-mr {
+ top: 50%;
+ margin-top: -4px;
+ right: -8px;
+ cursor: e-resize;
+}
+
+.dragresize-bl {
+ bottom: -8px;
+ left: -8px;
+ cursor: sw-resize;
+}
+.dragresize-bm {
+ bottom: -8px;
+ left: 50%;
+ margin-left: -4px;
+ cursor: s-resize;
+}
+.dragresize-br {
+ bottom: -8px;
+ right: -8px;
+ cursor: se-resize;
+}
+
+/* Required CSS classes: must be included in all pages using this script */
+
+/* Apply the element you want to drag/resize */
+.drsElement {
+ position: absolute;
+ border: 1px solid #333;
+}
+
+/*
+ The main mouse handle that moves the whole element.
+ You can apply to the same tag as drsElement if you want.
+*/
+.drsMoveHandle {
+ height: 20px;
+ background-color: #CCC;
+ border-bottom: 1px solid #666;
+ cursor: move;
+}
+
+/*
+ The DragResize object name is automatically applied to all generated
+ corner resize handles, as well as one of the individual classes below.
+*/
+.dragresize {
+ position: absolute;
+ width: 5px;
+ height: 5px;
+ font-size: 1px;
+ background: #EEE;
+ border: 1px solid #333;
+}
+
+/*
+ Individual corner classes - required for resize support.
+ These are based on the object name plus the handle ID.
+*/
+.dragresize-tl {
+ top: -8px;
+ left: -8px;
+ cursor: nw-resize;
+}
+.dragresize-tm {
+ top: -8px;
+ left: 50%;
+ margin-left: -4px;
+ cursor: n-resize;
+}
+.dragresize-tr {
+ top: -8px;
+ right: -8px;
+ cursor: ne-resize;
+}
+
+.dragresize-ml {
+ top: 50%;
+ margin-top: -4px;
+ left: -8px;
+ cursor: w-resize;
+}
+.dragresize-mr {
+ top: 50%;
+ margin-top: -4px;
+ right: -8px;
+ cursor: e-resize;
+}
+
+.dragresize-bl {
+ bottom: -8px;
+ left: -8px;
+ cursor: sw-resize;
+}
+.dragresize-bm {
+ bottom: -8px;
+ left: 50%;
+ margin-left: -4px;
+ cursor: s-resize;
+}
+.dragresize-br {
+ bottom: -8px;
+ right: -8px;
+ cursor: se-resize;
+}
