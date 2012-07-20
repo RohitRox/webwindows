@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Webwindows by RohitRox</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Webwindows</h1>
+        <p>jquery plugin for creating full fledged desktop like windows</p>
+
+        <p class="view"><a href="https://github.com/RohitRox/webwindows">View the Project on GitHub <small>RohitRox/webwindows</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/RohitRox/webwindows/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/RohitRox/webwindows/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/RohitRox/webwindows">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jQuery webwindows | create windows ui in web</h1>
+
+<h3>Author: @roxxypoxxy &amp; <a href="https://github.com/xtranophilist" class="user-mention">@xtranophilist</a>
+</h3>
+
+<h3>Uses DragResize v1.0 by Angus Turnbull - <a href="http://www.twinhelix.com">http://www.twinhelix.com</a>.</h3>
+
+<p>USAGE: </p>
+
+<div class="highlight">
+<pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'div#some_id'</span><span class="p">).</span><span class="nx">webwindows</span><span class="p">();</span>
+<span class="p">});</span>
+<span class="c1">// Binds an click event to div#some_id to fire a webwindow and put there its inner html , webwindows's title is set by the title of div#some_id</span>
+
+<span class="nx">PROGRAMMATICAL</span> <span class="nx">CONTROL</span><span class="o">:</span>
+
+<span class="c1">// fire up webwindow anywhere from the code</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">webwindows</span><span class="p">({</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'my title'</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="s1">'be gud do gud'</span><span class="p">});</span>
+
+<span class="c1">// fire up throw in the content of some div</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">webwindows</span><span class="p">({</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'my title'</span><span class="p">,</span> <span class="nx">div</span><span class="o">:</span> <span class="s1">'#mydiv'</span><span class="p">});</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">webwindows</span><span class="p">({</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'my title'</span><span class="p">,</span> <span class="nx">div</span><span class="o">:</span> <span class="s1">'.mydiv'</span><span class="p">});</span>
+
+
+<span class="c1">// close the latest webwindow</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">closewebwindows</span><span class="p">();</span>
+
+
+<span class="c1">//TODO</span>
+<span class="nx">Callbacks</span>
+</pre>
+</div>
+
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/RohitRox">RohitRox</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
