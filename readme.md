@@ -2,12 +2,16 @@
 ### Author: @roxxypoxxy & @xtranophilist
 ### Uses DragResize v1.0 by Angus Turnbull - http://www.twinhelix.com.
 
+DEMO:
+[Here](http://rohitrox.github.com/webwindows/ "Jquery WebWindows")
+
 USAGE: 
 ```javascript 
 $(document).ready(function() {
     $('div#some_id').webwindows();
 });
-// Binds an click event to div#some_id to fire a webwindow and put there its inner html , webwindows's title is set by the title of div#some_id
+// Binds an click event to div#some_id to fire a webwindow and put there its inner html
+// webwindows's title is set by the title of div#some_id
 
 PROGRAMMATICAL CONTROL:
 
