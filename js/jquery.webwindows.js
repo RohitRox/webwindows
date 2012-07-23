@@ -48,7 +48,6 @@ $.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('g
 
     $.closewebwindows = function(){
         pos = $('.drsElement').length;
-        console.log(pos);
         $(document.getElementById('pane'+pos)).remove();
         $(document.getElementById('min_win'+pos)).remove();
         POS[pos]=0;
@@ -163,7 +162,7 @@ $.webwindows({ title: 'my title', content: 'be gud do gud', afterclose: alert('g
             //tnode.style.left=(mc[0]-1)*250+(8*mc[0])+'px';
             min_str = '<span>'+str+'</span><a href="#" class="max" rel="'+id+'">[]</a><a href="#" class="close" rel="'+id+'">X</a>';
             tnode.innerHTML=min_str;
-            console.log(tnode);
+            //console.log(tnode);
             $('.webwin_min_bar').append(tnode);
         },
         maximize : function(webwindow){
